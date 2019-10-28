@@ -1,0 +1,13 @@
+name: crystal-sudoku
+version: 0.1.0
+
+authors:
+  - Alberto Venturini <aventurini@gmail.com>
+
+targets:
+  sudoku:
+    main: src/sudoku.cr
+
+crystal: 0.31.1
+
+license: MIT
