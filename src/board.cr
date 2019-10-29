@@ -24,8 +24,14 @@ module Sudoku
       @grid[y][x]
     end
 
-    def check_valid(value : Value, x, y)
-
+    def valid?(value : Value, x, y)
+      if value == nil
+        true
+      else
+        extract_row(y).all? { |i| i != value } &&
+        extract_column(x).all? { |i| i != value } &&
+        extract_block(x, y).all? { |i| i.all? { |j| j != value } }
+      end
     end
 
     def extract_row(y)

@@ -42,4 +42,15 @@ describe Sudoku::Board do
     board.extract_block(3, 1).should eq [[42, 43], [44, 45]]
   end
 
+  it "validates cells correctly" do
+    board = Sudoku::Board.new(9, 3)
+    board.put(1, 0, 0)
+    board.put(2, 0, 1)
+    board.put(3, 1, 0)
+    board.valid?(4, 0, 2).should be_true
+    board.valid?(4, 2, 0).should be_true
+    board.valid?(3, 0, 2).should be_false
+    board.valid?(3, 2, 0).should be_false
+  end
+
 end
