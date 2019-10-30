@@ -10,9 +10,14 @@ module Sudoku
 
     @grid : Array(Array(Value))
     getter grid
+    
+    getter size
+    getter block_size
 
     def initialize(@size : Int32, @block_size : Int32)
-      raise BoardException.new() unless @size.divisible_by?(@block_size)
+      if !@size.divisible_by?(@block_size)
+        raise BoardException.new("Invalid block size: #{@block_size} for board size: #{@size}")
+      end
       @grid = Array(Array(Value)).new(@size) { Array(Value).new(@size, nil) }
     end
 
