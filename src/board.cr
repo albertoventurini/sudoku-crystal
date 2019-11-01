@@ -57,6 +57,23 @@ module Sudoku
         }
       }
     end
+
+    # Convert a board to its string representation
+    def to_s
+      @grid.map { |row|
+        row.map { |cell|
+          case cell
+          when Nil
+            '.'
+          else cell.to_s
+          end
+        }.join
+      }.join("\n")
+    end
+
+    def solved?
+      @grid.flatten.none? { |i| i == nil }
+    end
       
   end
 

@@ -53,4 +53,23 @@ describe Sudoku::Board do
     board.valid?(3, 2, 0).should be_false
   end
 
+  it "should print the board correctly" do
+    board = Sudoku::Board.new(4, 2)
+    (0..3).each { |i| board.put(i, i, i) }
+
+    board.to_s.should eq \
+    "0...\n" \
+    ".1..\n" \
+    "..2.\n" \
+    "...3"
+  end
+
+  it "should not be solved if it's not solved" do
+    board = Sudoku::Board.new(4, 2)
+    (0..3).each { |i| board.put(i, i, i) }
+
+    board.solved?.should be_false
+  end
+
+
 end
