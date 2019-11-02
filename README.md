@@ -1,27 +1,4 @@
 # sudoku
 
-TODO: Write a description here
-
-## Installation
-
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/sudoku/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Alberto Venturini](https://github.com/your-github-user) - creator and maintainer
+This is a simple Sudoku solver written in [Crystal](https://crystal-lang.org/).
+It implements a backtracking algorithm.
