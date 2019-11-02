@@ -64,11 +64,11 @@ describe Sudoku::Board do
     "...3"
   end
 
-  it "should not be solved if it's not solved" do
+  it "should not be complete if there are nulls" do
     board = Sudoku::Board.new(4, 2)
     (0..3).each { |i| board.put(i, i, i) }
 
-    board.solved?.should be_false
+    board.complete?.should be_false
   end
 
 

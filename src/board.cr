@@ -71,7 +71,7 @@ module Sudoku
       }.join("\n")
     end
 
-    def solved?
+    def complete?
       @grid.flatten.none? { |i| i == nil }
     end
       

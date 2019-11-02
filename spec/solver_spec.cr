@@ -17,17 +17,16 @@ describe Sudoku::Parser do
     board = Sudoku::Parser.parse(board_string, block_size: 3)
     Sudoku::Solver.solve(board)
 
-    true
-    # board.to_s.should eq \
-    # "812753649\n" \
-    # "943682175\n" \
-    # "675491283\n" \
-    # "154237896\n" \
-    # "369845721\n" \
-    # "287169534\n" \
-    # "521974368\n" \
-    # "438526917\n" \
-    # "796318452"
+    board.to_s.should eq \
+    "812753649\n" \
+    "943682175\n" \
+    "675491283\n" \
+    "154237896\n" \
+    "369845721\n" \
+    "287169534\n" \
+    "521974368\n" \
+    "438526917\n" \
+    "796318452"
 
   end
 
